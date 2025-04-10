@@ -36,7 +36,7 @@
     <!-- CONTEÚDO -->
     <main class="main">
         <!-- Hero -->
-        <section id="hero" class="main__background bg-secondary">
+        <section id="hero" class="main__background px-[5%] bg-secondary">
             <section class="section">
                 <article class="article">
                     <h1 class="text-white">SOFTWARE DE GESTÃO PARA EMPRESAS DE ENERGIA SOLAR</h1>
@@ -45,33 +45,35 @@
         </section>
 
         <!-- Beneficios -->
-        <section id="beneficios" class="main__background bg-main">
+        <section id="beneficios" class="main__background px-[5%] bg-main">
             <section class="section">
                 <h2 class="section__title text-white">Tudo em um só lugar</h2>
             </section>
         </section>
 
         <!-- Motivação -->
-        <section class="main__background bg-white">
-            <section class="section">
-                <div class="section__banner-container">
-                    <img class="section__banner" src="" alt="">
+        <section class="main__background px-[5%] bg-white">
+            <section class="section flex flex-row items-center">
+                <div class="section__banner-container bg-hover-white w-1/5 rounded-3xl">
+                    <img class="section__banner w-full" src="assets/images/gold-medal.png" alt="">
                 </div>
-                <article class="article">
-                    <div class="article__content-container text-blue">
+                <article class="article grid gap-3">
+                    <div class="article__content-container text-blue grid gap-0.5">
                         <h2 class="article__title poppins-bold text-3xl">Por que escolher o SolarFlow?</h2>
-                        <p class="article__content text-1-l">O SolarFlow foi projetado para resolver problemas reais enfrentados por empresas de energia solar, oferecendo uma solução completa para o gerenciamento de projetos, desde a venda até a instalação.</p>
+                        <p class="article__content">O SolarFlow foi projetado para resolver problemas reais enfrentados por empresas de energia solar, oferecendo uma solução completa para o gerenciamento de projetos, desde a venda até a instalação.</p>
                     </div>
-                    <a href="" class="button button--cta">
-                        <span class="button__content">ENTRE EM CONTATO</span>
-                        <img class="button__icon" src="" alt="">
-                    </a>
+                    <div class="article__button-container">
+                        <a href="" class="button button--cta bg-cyan text-white flex flex-row items-center gap-2 p-3 rounded-lg">
+                            <span class="button__content poppins-semibold">ENTRE EM CONTATO</span>
+                            <img class="button__icon w-6" src="assets/icons/arrow-up-right--white.svg" alt="">
+                        </a>
+                    </div>
                 </article>
             </section>
         </section>
 
         <!-- Aproveite -->
-        <section class="main__background bg-blue text-white">
+        <section class="main__background px-[5%] bg-blue text-white">
             <section class="section">
                 <header class="section__header">
                     <h2 class="section__title text-cyan">Aproveite enquanto é tempo!</h2>
@@ -104,17 +106,17 @@
     </main>
 
     <!-- CONTEÚDO LATERAL -->
-    <aside class="disabled:">
+    <aside class="">
         <!-- Ícone do whatsapp -->
     </aside>
 
     <!-- FOOTER -->
-    <footer id="contato" class="footer poppins-regular text-1-l text-white bg-hover-blue">
+    <footer id="contato" class="footer px-[5%] poppins-regular text-1-l text-white bg-hover-blue flex flex-row-reverse md:flex-col justify-between px-[5%] py-5">
         <!-- Contato -->
-        <article class="article">
-            <h2 class="article__title">Contato</h2>
+        <article class="article text-right">
+            <h2 class="article__title poppins-bold">Contato</h2>
             <p class="article__content">contato.solarflow@.com</p>
-            <div class="article__content-aside">
+            <div class="article__content-aside flex flex-wrap justify-end gap-x-3 gap-y-1 text-right">
                 <span>(77) 99121-6617</span>
                 <span>(77) 99919-9124</span>
             </div>
@@ -122,7 +124,7 @@
 
         <!-- Direitos Autorais -->
         <article class="article">
-            <h2 class="article__title">SolarFlow</h2>
+            <h2 class="article__title poppins-semibold text-3xl">SolarFlow</h2>
             <p class="article__content">Copyright © 2025. SolarFlow™. Todos os direitos reservados.</p>
         </article>
     </footer>
