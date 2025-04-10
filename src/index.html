@@ -1,13 +1,125 @@
 <!doctype html>
-<html>
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./output.css" rel="stylesheet">
+    <meta name="author" content="Equipe SolarFlow">
+    <meta name="description" content="Software de Gestão Para Empresas de Energia Solar">
+    <meta name="keywords" content="Energia Solar, Energia Fotovoltaica, Gestão, Software de Gestão, Automação, Análise, Análise e Relarios, Monitoramento">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Estilos -->
+    <link href="./assets/css/output.css" rel="stylesheet">
 </head>
 <body>
-  <h1 class="text-3xl font-bold underline text-amber-400">
-    Hello world!
-  </h1>
+    <!--    
+        * Utilizar metodologia BEMCSS para organização de nomenclatura (coloca as classes Tailwind na frente)
+        * A section 'main_background' se trata somente do plano de fundo da seção (usado para centralizar conteúdo e manter bg em tamanhos de tela maior que 1400px)
+    -->
+
+    <!-- HEADER -->
+    <header class="header header--navigation">
+        <nav class="nav">
+            <h1 class="nav__title">SolarFlow</h1>
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#hero" class="nav__link">Início</a></li>
+                <li class="nav__item"><a href="#beneficios" class="nav__link">Benefícios</a></li>
+                <li class="nav__item"><a href="#contato" class="nav__link">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTEÚDO -->
+    <main class="main">
+        <!-- Hero -->
+        <section id="hero" class="main__background">
+            <section class="section">
+                <article class="article">
+                    <h1>SOFTWARE DE GESTÃO PARA EMPRESAS DE ENERGIA SOLAR</h1>
+                </article>
+            </section>
+        </section>
+
+        <!-- Beneficios -->
+        <section id="beneficios" class="main__background">
+            <section class="section">
+                <h2 class="section__title">Tudo em um só lugar</h2>
+            </section>
+        </section>
+
+        <!-- Motivação -->
+        <section class="main__background">
+            <section class="section">
+                <div class="section__banner-container">
+                    <img class="section__banner" src="" alt="">
+                </div>
+                <article class="article">
+                    <div class="article__content-container">
+                        <h2 class="article__title">Por que escolher o SolarFlow?</h2>
+                        <p class="article__content">O SolarFlow foi projetado para resolver problemas reais enfrentados por empresas de energia solar, oferecendo uma solução completa para o gerenciamento de projetos, desde a venda até a instalação.</p>
+                    </div>
+                    <a href="" class="button button--cta">
+                        <span class="button__content">ENTRE EM CONTATO</span>
+                        <img class="button__icon" src="" alt="">
+                    </a>
+                </article>
+            </section>
+        </section>
+
+        <!-- Aproveite -->
+        <section class="main__background">
+            <section class="section">
+                <header class="section__header">
+                    <h2 class="section__title">Aproveite enquanto é tempo!</h2>
+                    <h3 class="section__caption">Garanta seu Pré-Cadastro e Aproveite Benefícios Exclusivos!</h3>
+                </header>
+                <div class="section__content-container">
+                    <!-- Motivo 01 -->
+                    <article class="article">
+                        <span class="article__count">1</span>
+                        <h3 class="article__title">Acesso antecipado</h3>
+                        <p class="article__content">Seja um dos primeiros a utilizar o SolarFlow e tenha uma vantagem competitiva no mercado.</p>
+                    </article>
+
+                    <!-- Motivo 02 -->
+                    <article class="article">
+                        <span class="article__count">2</span>
+                        <h3 class="article__title">Descontos de até 50%</h3>
+                        <p class="article__content">Aproveite o preço promocional no primeiro ano, garantindo economia enquanto usufrui de todas as funcionalidades.</p>
+                    </article>
+
+                    <!-- Motivo 03 -->
+                    <article class="article">
+                        <span class="article__count">3</span>
+                        <h3 class="article__title">Suporte Prioritário</h3>
+                        <p class="article__content">Tenha atendimento exclusivo e personalizado para tirar todas as suas dúvidas e otimizar sua experiência com o sistema.</p>
+                    </article>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <!-- CONTEÚDO LATERAL -->
+    <aside class="is-desactive">
+        <!-- Ícone do whatsapp -->
+    </aside>
+
+    <!-- FOOTER -->
+    <footer id="contato" class="footer">
+        <!-- Contato -->
+        <article class="article">
+            <h2 class="article__title">Contato</h2>
+            <p class="article__content">contato.solarflow@.com</p>
+            <div class="article__content-aside">
+                <span>(77) 99121-6617</span>
+                <span>(77) 99919-9124</span>
+            </div>
+        </article>
+
+        <!-- Direitos Autorais -->
+        <article class="article">
+            <h2 class="article__title">SolarFlow</h2>
+            <p class="article__content">Copyright © 2025. SolarFlow™. Todos os direitos reservados.</p>
+        </article>
+    </footer>
 </body>
 </html>

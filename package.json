@@ -1,4 +1,11 @@
 {
+  "name": "SolarFlow - landing page",
+  "version": "1.0.0",
+  "description": "Software de Gestão Para Empresas de Energia Solar",
+  "main": "src/index.html",
+  "scripts": {
+    "compile:TW": "npx @tailwindcss/cli -i ./src/assets/css/input.css -o ./src/assets/css/output.css --watch --minify"
+  },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.3",
     "tailwindcss": "^4.1.3"
