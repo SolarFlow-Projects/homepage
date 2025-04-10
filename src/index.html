@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
 </head>
-<body class="poppins-regular text-1-l text-blue">
+<body class="poppins-regular text-base text-blue">
     <!--    
         * Utilizar metodologia BEMCSS para organização de nomenclatura (coloca as classes Tailwind na frente)
         * A section 'main_background' se trata somente do plano de fundo da seção (usado para centralizar conteúdo e manter bg em tamanhos de tela maior que 1400px)
@@ -73,32 +73,38 @@
         </section>
 
         <!-- Aproveite -->
-        <section class="main__background px-[5%] bg-blue text-white">
-            <section class="section">
+        <section class="main__background px-[5%] py-10 pb-20 bg-blue text-white">
+            <section class="section grid gap-5">
                 <header class="section__header">
-                    <h2 class="section__title text-cyan">Aproveite enquanto é tempo!</h2>
-                    <h3 class="section__caption">Garanta seu Pré-Cadastro e Aproveite Benefícios Exclusivos!</h3>
+                    <h2 class="section__title text-cyan poppins-bold text-3xl text-center">Aproveite enquanto é tempo!</h2>
+                    <h3 class="section__caption text-center text-lg">Garanta seu Pré-Cadastro e Aproveite Benefícios Exclusivos!</h3>
                 </header>
-                <div class="section__content-container">
+                <div class="section__content-container flex justify-center gap-10 flex-wrap">
                     <!-- Motivo 01 -->
-                    <article class="article">
-                        <span class="article__count bg-white text-blue text-4xl poppins-bold">1</span>
-                        <h3 class="article__title text-cyan">Acesso antecipado</h3>
-                        <p class="article__content">Seja um dos primeiros a utilizar o SolarFlow e tenha uma vantagem competitiva no mercado.</p>
+                    <article class="article flex items-center flex-col gap-1.5 max-w-3xs basis-200">
+                        <span class="article__count bg-white text-blue text-4xl poppins-bold w-14 h-14 flex justify-center items-center rounded-full">1</span>
+                        <div class="article__content-container">
+                            <h3 class="article__title text-cyan poppins-semibold text-xl text-center">Acesso antecipado</h3>
+                            <p class="article__content text-center text-sm">Seja um dos primeiros a utilizar o SolarFlow e tenha uma vantagem competitiva no mercado.</p>
+                        </div>
                     </article>
 
                     <!-- Motivo 02 -->
-                    <article class="article">
-                        <span class="article__count ">2</span>
-                        <h3 class="article__title text-cyan">Descontos de até 50%</h3>
-                        <p class="article__content">Aproveite o preço promocional no primeiro ano, garantindo economia enquanto usufrui de todas as funcionalidades.</p>
+                    <article class="article flex items-center flex-col gap-1.5 max-w-3xs basis-200">
+                        <span class="article__count bg-white text-blue text-4xl poppins-bold w-14 h-14 flex justify-center items-center rounded-full">2</span>
+                        <div class="article__content-container">
+                            <h3 class="article__title text-cyan poppins-semibold text-xl text-center">Descontos de até 50%</h3>
+                            <p class="article__content text-center text-sm">Aproveite o preço promocional no primeiro ano, garantindo economia enquanto usufrui de todas as funcionalidades.</p>
+                        </div>
                     </article>
 
                     <!-- Motivo 03 -->
-                    <article class="article">
-                        <span class="article__count">3</span>
-                        <h3 class="article__title text-cyan">Suporte Prioritário</h3>
-                        <p class="article__content">Tenha atendimento exclusivo e personalizado para tirar todas as suas dúvidas e otimizar sua experiência com o sistema.</p>
+                    <article class="article flex items-center flex-col gap-1.5 max-w-3xs basis-200">
+                        <span class="article__count bg-white text-blue text-4xl poppins-bold w-14 h-14 flex justify-center items-center rounded-full">3</span>
+                        <div class="article__content-container">
+                            <h3 class="article__title text-cyan poppins-semibold text-xl text-center">Suporte Prioritário</h3>
+                            <p class="article__content text-center text-sm">Tenha atendimento exclusivo e personalizado para tirar todas as suas dúvidas e otimizar sua experiência com o sistema.</p>
+                        </div>
                     </article>
                 </div>
             </section>
@@ -111,19 +117,19 @@
     </aside>
 
     <!-- FOOTER -->
-    <footer id="contato" class="footer px-[5%] poppins-regular text-1-l text-white bg-hover-blue flex flex-row-reverse md:flex-col justify-between px-[5%] py-5">
+    <footer id="contato" class="footer px-[5%] poppins-regular text-1-l text-white bg-hover-blue flex md:flex-row-reverse flex-col md:justify-between px-[5%] py-5 md:pb-5 pb-10 gap-y-5 gap-x-7">
         <!-- Contato -->
-        <article class="article text-right">
+        <article class="article md:text-right text-center">
             <h2 class="article__title poppins-bold">Contato</h2>
             <p class="article__content">contato.solarflow@.com</p>
-            <div class="article__content-aside flex flex-wrap justify-end gap-x-3 gap-y-1 text-right">
+            <div class="article__content-aside flex flex-wrap md:justify-end justify-center gap-x-3 gap-y-1 md:text-right">
                 <span>(77) 99121-6617</span>
                 <span>(77) 99919-9124</span>
             </div>
         </article>
 
         <!-- Direitos Autorais -->
-        <article class="article">
+        <article class="article text-center md:text-left">
             <h2 class="article__title poppins-semibold text-3xl">SolarFlow</h2>
             <p class="article__content">Copyright © 2025. SolarFlow™. Todos os direitos reservados.</p>
         </article>
