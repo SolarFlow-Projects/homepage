@@ -1,3 +1,22 @@
 @import "tailwindcss";
 @import "./base/typography.css";
-@import "./base/variables.css";
+
+@theme{
+    --color-main: #17A589;
+    --color-secondary: #0B2B3F;
+    --color-tertiare-white: #FFFFFF;
+    --color-tertiare-yellow: #F4D03F;
+
+    --color-white: #FFFFFF;
+    --color-cyan: #17A589;
+    --color-light-blue: #A5BBC9;
+    --color-blue: #0B2B3F;
+    --color-dark-blue: #667580;
+    --color-yellow: #F4D03F;
+    --color-black: #1D2022;
+    --color-gray: #BABABA;
+
+    --color-hover-white: #CECECE;
+    --color-hover-cyan: #13997F;
+    --color-hover-blue: #092232;
+}

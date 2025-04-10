@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
 </head>
-<body class="poppins-regular">
+<body class="poppins-regular text-1-l text-blue">
     <!--    
         * Utilizar metodologia BEMCSS para organização de nomenclatura (coloca as classes Tailwind na frente)
         * A section 'main_background' se trata somente do plano de fundo da seção (usado para centralizar conteúdo e manter bg em tamanhos de tela maior que 1400px)
@@ -36,31 +36,31 @@
     <!-- CONTEÚDO -->
     <main class="main">
         <!-- Hero -->
-        <section id="hero" class="main__background">
+        <section id="hero" class="main__background bg-secondary">
             <section class="section">
                 <article class="article">
-                    <h1>SOFTWARE DE GESTÃO PARA EMPRESAS DE ENERGIA SOLAR</h1>
+                    <h1 class="text-white">SOFTWARE DE GESTÃO PARA EMPRESAS DE ENERGIA SOLAR</h1>
                 </article>
             </section>
         </section>
 
         <!-- Beneficios -->
-        <section id="beneficios" class="main__background">
+        <section id="beneficios" class="main__background bg-main">
             <section class="section">
-                <h2 class="section__title">Tudo em um só lugar</h2>
+                <h2 class="section__title text-white">Tudo em um só lugar</h2>
             </section>
         </section>
 
         <!-- Motivação -->
-        <section class="main__background">
+        <section class="main__background bg-white">
             <section class="section">
                 <div class="section__banner-container">
                     <img class="section__banner" src="" alt="">
                 </div>
                 <article class="article">
-                    <div class="article__content-container">
-                        <h2 class="article__title">Por que escolher o SolarFlow?</h2>
-                        <p class="article__content">O SolarFlow foi projetado para resolver problemas reais enfrentados por empresas de energia solar, oferecendo uma solução completa para o gerenciamento de projetos, desde a venda até a instalação.</p>
+                    <div class="article__content-container text-blue">
+                        <h2 class="article__title poppins-bold text-3xl">Por que escolher o SolarFlow?</h2>
+                        <p class="article__content text-1-l">O SolarFlow foi projetado para resolver problemas reais enfrentados por empresas de energia solar, oferecendo uma solução completa para o gerenciamento de projetos, desde a venda até a instalação.</p>
                     </div>
                     <a href="" class="button button--cta">
                         <span class="button__content">ENTRE EM CONTATO</span>
@@ -71,31 +71,31 @@
         </section>
 
         <!-- Aproveite -->
-        <section class="main__background">
+        <section class="main__background bg-blue text-white">
             <section class="section">
                 <header class="section__header">
-                    <h2 class="section__title">Aproveite enquanto é tempo!</h2>
+                    <h2 class="section__title text-cyan">Aproveite enquanto é tempo!</h2>
                     <h3 class="section__caption">Garanta seu Pré-Cadastro e Aproveite Benefícios Exclusivos!</h3>
                 </header>
                 <div class="section__content-container">
                     <!-- Motivo 01 -->
                     <article class="article">
-                        <span class="article__count">1</span>
-                        <h3 class="article__title">Acesso antecipado</h3>
+                        <span class="article__count bg-white text-blue text-4xl poppins-bold">1</span>
+                        <h3 class="article__title text-cyan">Acesso antecipado</h3>
                         <p class="article__content">Seja um dos primeiros a utilizar o SolarFlow e tenha uma vantagem competitiva no mercado.</p>
                     </article>
 
                     <!-- Motivo 02 -->
                     <article class="article">
-                        <span class="article__count">2</span>
-                        <h3 class="article__title">Descontos de até 50%</h3>
+                        <span class="article__count ">2</span>
+                        <h3 class="article__title text-cyan">Descontos de até 50%</h3>
                         <p class="article__content">Aproveite o preço promocional no primeiro ano, garantindo economia enquanto usufrui de todas as funcionalidades.</p>
                     </article>
 
                     <!-- Motivo 03 -->
                     <article class="article">
                         <span class="article__count">3</span>
-                        <h3 class="article__title">Suporte Prioritário</h3>
+                        <h3 class="article__title text-cyan">Suporte Prioritário</h3>
                         <p class="article__content">Tenha atendimento exclusivo e personalizado para tirar todas as suas dúvidas e otimizar sua experiência com o sistema.</p>
                     </article>
                 </div>
@@ -104,12 +104,12 @@
     </main>
 
     <!-- CONTEÚDO LATERAL -->
-    <aside class="is-desactive">
+    <aside class="disabled:">
         <!-- Ícone do whatsapp -->
     </aside>
 
     <!-- FOOTER -->
-    <footer id="contato" class="footer">
+    <footer id="contato" class="footer poppins-regular text-1-l text-white bg-hover-blue">
         <!-- Contato -->
         <article class="article">
             <h2 class="article__title">Contato</h2>
