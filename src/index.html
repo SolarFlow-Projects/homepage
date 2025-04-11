@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-br" class="scroll-smooth">
 <head>
     <meta name="author" content="Equipe SolarFlow">
     <meta name="description" content="Software de Gestão Para Empresas de Energia Solar">
@@ -22,25 +22,43 @@
     -->
 
     <!-- HEADER -->
-    <header class="header header--navigation">
-        <nav class="nav">
-            <h1 class="nav__title">SolarFlow</h1>
-            <ul class="nav__list">
-                <li class="nav__item"><a href="#hero" class="nav__link">Início</a></li>
-                <li class="nav__item"><a href="#beneficios" class="nav__link">Benefícios</a></li>
-                <li class="nav__item"><a href="#contato" class="nav__link">Contato</a></li>
-            </ul>
+    <header class="header header--navigation bg-secondary">
+        <nav class="nav flex flex-row items-center justify-between  px-[23px] py-6 max-w-7xl lg:mx-auto">
+            <img class="w-[117px] h-[29px]" src="assets/images/logo.png" alt="">
+        <!-- Botão hambúrguer (visível apenas em mobile) -->
+        <button id="hamburger" class="flex flex-col justify-between w-[30px] h-[20px] md:hidden focus:outline-none z-10">
+            <span class="hamburger-line w-full h-[3px] bg-white rounded-full transition-all duration-300"></span>
+            <span class="hamburger-line w-full h-[3px] bg-white rounded-full transition-all duration-300"></span>
+            <span class="hamburger-line w-full h-[3px] bg-white rounded-full transition-all duration-300"></span>
+        </button>
+        
+        <!-- Menu de navegação -->
+        <ul id="menu" class="nav__list hidden md:flex md:flex-row absolute md:static top-[52px] left-0 w-full md:w-auto bg-secondary md:bg-transparent shadow-md md:shadow-none py-4 md:py-0 z-20 text-white">
+            <li class="nav__item py-3 px-[23px] md:py-0 md:px-4"><a href="#hero" class="nav__link font-medium hover:text-gray-600 transition-colors">Início</a></li>
+            <li class="nav__item py-3 px-[23px] md:py-0 md:px-4"><a href="#beneficios" class="nav__link font-medium hover:text-gray-600 transition-colors">Benefícios</a></li>
+            <li class="nav__item py-3 px-[23px] md:py-0 md:px-4"><a href="#contato" class="nav__link font-medium hover:text-gray-600 transition-colors">Contato</a></li>
+        </ul>
         </nav>
     </header>
 
     <!-- CONTEÚDO -->
-    <main class="main">
+    <main class="main ">
         <!-- Hero -->
-        <section id="hero" class="main__background px-[5%] bg-secondary">
-            <section class="section">
-                <article class="article">
-                    <h1 class="text-white">SOFTWARE DE GESTÃO PARA EMPRESAS DE ENERGIA SOLAR</h1>
-                </article>
+        <section id="hero" class="main__background bg-secondary px-[23px] pt-10 pb-16 flex justify-center">
+            <section class="flex flex-col lg:flex-row lg:gap-x-10 gap-y-4 w-full lg:justify-center max-w-7xl">
+                <section class="flex flex-col gap-y-4 w-full max-w-[590px]">
+                    <h1 class="text-gray text-[20px] leading-[20px] lg:text-[25px] lg:leading-[40px] font-semibold">SOFTWARE DE GESTÃO PARA EMPRESAS DE ENERGIA SOLAR</h1>
+                    <h2 class="text-main font-semibold text-[40px] lg:text-[55px] leading-[45px] lg:leading-[70px]">A Solução Completa Para Sua Empresa</h2>
+                    <p class="text-white text-[15px]">Simplifique a gestão de seus projetos solares com a plataforma SolarFlow. Desde o primeiro contato até a instalação completa, nosso sistema centraliza processos, automatiza tarefas e oferece relatórios em tempo real para otimizar sua operação.</p>
+                    <a href="" class="uppercase font-semibold flex items-center justify-center gap-2 text-white bg-main w-fit rounded-lg px-4 py-3 lg:text-[20px] ">
+                        Entre em contato
+                        <img src="assets/icons/arrow-up-right--white--contato.svg" alt="" class="">
+                    </a>
+                </section>
+                <div>
+                    <img src="assets/images/banner_mobile.png" alt="" class="w-full lg:hidden">
+                    <img src="assets/images/banner_desktop.png" alt="" class="hidden lg:flex w-full max-w-[627px] px-10">
+                </div>
             </section>
         </section>
 
@@ -130,3 +148,61 @@
     </footer>
 </body>
 </html>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.getElementById('hamburger');
+        const menu = document.getElementById('menu');
+        const hamburgerLines = document.querySelectorAll('.hamburger-line');
+        
+        // Função para alternar o menu
+        function toggleMenu() {
+            // Alterna a classe para mostrar/esconder o menu
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
+            menu.classList.toggle('flex-col');
+            
+            // Anima as linhas do hambúrguer para formar um X
+            if (!menu.classList.contains('hidden')) {
+                // Transformar em X
+                hamburgerLines[0].classList.add('rotate-45', 'translate-y-[8.5px]');
+                hamburgerLines[1].classList.add('opacity-0');
+                hamburgerLines[2].classList.add('-rotate-45', '-translate-y-[8.5px]');
+            } else {
+                // Voltar ao normal
+                hamburgerLines[0].classList.remove('rotate-45', 'translate-y-[8.5px]');
+                hamburgerLines[1].classList.remove('opacity-0');
+                hamburgerLines[2].classList.remove('-rotate-45', '-translate-y-[8.5px]');
+            }
+        }
+        
+        // Adiciona evento de clique ao botão hambúrguer
+        hamburger.addEventListener('click', toggleMenu);
+        
+        // Fecha o menu ao clicar em um link (só em mobile)
+        const navLinks = document.querySelectorAll('.nav__link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth < 768) {
+                    toggleMenu();
+                }
+            });
+        });
+        
+        // Ajusta o menu ao redimensionar a janela
+        window.addEventListener('resize', function() {
+            if (window.innerWidth >= 768) {
+                menu.classList.remove('hidden', 'flex', 'flex-col');
+                menu.classList.add('flex', 'flex-row');
+                
+                // Reset das linhas do hambúrguer
+                hamburgerLines[0].classList.remove('rotate-45', 'translate-y-[8.5px]');
+                hamburgerLines[1].classList.remove('opacity-0');
+                hamburgerLines[2].classList.remove('-rotate-45', '-translate-y-[8.5px]');
+            } else if (!hamburger.classList.contains('active')) {
+                menu.classList.add('hidden');
+                menu.classList.remove('flex', 'flex-col');
+            }
+        });
+    });
+</script>
