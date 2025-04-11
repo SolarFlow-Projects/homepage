@@ -32,7 +32,7 @@
     -->
 
     <!-- HEADER -->
-    <header class="header header--navigation bg-secondary">
+    <header id="header" class="header header--navigation bg-secondary">
         <nav class="nav flex flex-row items-center justify-between  px-[23px] py-6 max-w-7xl lg:mx-auto">
             <img class="w-[117px] h-[29px]" src="assets/images/logo.png" alt="">
         <!-- Botão hambúrguer (visível apenas em mobile) -->
@@ -44,7 +44,7 @@
         
         <!-- Menu de navegação -->
         <ul id="menu" class="nav__list hidden md:flex md:flex-row absolute md:static top-[52px] left-0 w-full md:w-auto bg-secondary md:bg-transparent shadow-md md:shadow-none py-4 md:py-0 z-20 text-white">
-            <li class="nav__item py-3 px-[23px] md:py-0 md:px-4"><a href="#hero" class="nav__link font-medium hover:text-gray-600 transition-colors">Início</a></li>
+            <li class="nav__item py-3 px-[23px] md:py-0 md:px-4"><a href="#header" class="nav__link font-medium hover:text-gray-600 transition-colors">Início</a></li>
             <li class="nav__item py-3 px-[23px] md:py-0 md:px-4"><a href="#beneficios" class="nav__link font-medium hover:text-gray-600 transition-colors">Benefícios</a></li>
             <li class="nav__item py-3 px-[23px] md:py-0 md:px-4"><a href="#contato" class="nav__link font-medium hover:text-gray-600 transition-colors">Contato</a></li>
         </ul>
@@ -55,10 +55,10 @@
     <main class="main ">
         <!-- Hero -->
         <section id="hero" class="main__background bg-secondary px-[23px] pt-10 pb-16 flex justify-center">
-            <section class="flex flex-col lg:flex-row lg:gap-x-10 gap-y-4 w-full lg:justify-center max-w-7xl">
+            <section class="flex flex-col md:grid md:grid-cols-2 lg: md:gap-x-10 gap-y-4 w-full lg:justify-center max-w-7xl">
                 <section class="flex flex-col gap-y-4 w-full max-w-[590px]">
-                    <h1 class="text-gray text-[20px] leading-[20px] lg:text-[25px] lg:leading-[40px] font-semibold">SOFTWARE DE GESTÃO PARA EMPRESAS DE ENERGIA SOLAR</h1>
-                    <h2 class="text-main font-semibold text-[40px] lg:text-[55px] leading-[45px] lg:leading-[70px]">A Solução Completa Para Sua Empresa</h2>
+                    <h1 class="text-gray text-[20px] leading-[22px] font-semibold">SOFTWARE DE GESTÃO PARA EMPRESAS DE ENERGIA SOLAR</h1>
+                    <h2 class="text-main font-semibold text-[40px] lg:text-[55px] leading-[45px] lg:leading-[55px]">A Solução Completa Para Sua Empresa</h2>
                     <p class="text-white text-[15px]">Simplifique a gestão de seus projetos solares com a plataforma SolarFlow. Desde o primeiro contato até a instalação completa, nosso sistema centraliza processos, automatiza tarefas e oferece relatórios em tempo real para otimizar sua operação.</p>
                     <div class="article__button-container">
                         <a target="_blank" href="https://wa.me/+5577991216617?text=Ol%C3%A1!%20Estou%20muito%20interessado%20em%20conhecer%20mais%20sobre%20o%20SolarFlow%20e%20como%20ele%20pode%20beneficiar%20minha%20empresa!" class="button button--cta bg-cyan text-white flex flex-row items-center gap-2 p-3 rounded-lg w-fit hover:scale-[1.01] hover:bg-hover-cyan trasition-all duration-500">
@@ -67,19 +67,19 @@
                         </a>
                     </div>
                 </section>
-                <div>
-                    <img src="assets/images/banner_mobile.png" alt="" class="w-full lg:hidden">
-                    <img src="assets/images/banner_desktop.png" alt="" class="hidden lg:flex w-full max-w-[627px] px-10">
+                <div class="flex justify-center">
+                    <img src="assets/images/banner.svg" alt="" class="w-full lg:hidden max-w-[450px]">
+                    <img src="assets/images/banner.svg" alt="" class="hidden lg:flex w-full  px-10">
                 </div>
             </section>
         </section>
 
         <!-- Beneficios -->
         <section id="beneficios" class="main__background px-[5%] bg-main">
-            <div class="mx-auto pt-10 pb-[50px] lg:pb-[105px] max-w-[1280px]">
+            <div class="mx-auto pt-10 pb-[50px] lg:pb-[105px] max-w-[1280px] lg:flex lg:flex-col lg:items-center">
                 <!-- Título principal -->
-                <h2 class="text-2xl lg:text-4xl font-semibold text-white text-center leading-7 pb-5 lg:pb-9"><span
-                        class="font-extrabold">Tudo</span> em um só lugar</h2>
+                <h2 class="text-2xl lg:text-4xl font-semibold text-white text-center leading-7 pb-5 lg:pb-9"><strong
+                        class="font-extrabold">Tudo</strong> em um só lugar</h2>
 
                 <!-- Filtros/Tabs -->
                 <div class="relative">
@@ -104,13 +104,12 @@
                 </div>
 
                 <!-- Cards de recursos - versão desktop (grid) -->
-                <div class="desktop-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+                <div class="desktop-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-fit justify-center gap-6 mb-10">
                     <!-- GESTÃO DE PROCESSOS -->
-                    <div class="feature-card bg-white p-6 rounded-3xl shadow-md min-h-[432px]" data-category="all">
+                    <div class="feature-card bg-white p-6 rounded-2xl shadow-md min-h-[400px] md:max-w-xs" data-category="all">
                         <div class="flex items-center gap-4 mb-4">
-                            <div
-                                class="min-[1300px]:p-5 p-3.5 bg-secondary rounded-3xl flex items-center justify-center">
-                                <svg class="min-[1300px]:w-[90px] w-[70px]" viewBox="0 0 105 95" fill="none"
+                            <div class=" p-3.5 bg-secondary rounded-2xl flex items-center justify-center">
+                                <svg class=" w-[70px]" viewBox="0 0 105 95" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <rect x="2.5" y="2.5" width="45" height="55" rx="7.5" stroke="white"
                                         stroke-width="5" />
@@ -122,20 +121,20 @@
                                         stroke-width="5" />
                                 </svg>
                             </div>
-                            <h3 class="text-xl min-[1300px]:text-[23px] font-bold text-secondary break-words">Gestão Centralizada de
+                            <h3 class="text-xl font-bold text-secondary break-words">Gestão Centralizada de
                                 Processos</h3>
                         </div>
-                        <p class="text-secondary text-[18px] font-medium"><span class="font-normal">O SolarFlow</span>
+                        <p class="text-secondary text-base font-medium"><span class="font-normal">O SolarFlow</span>
                             centraliza todos os processos operacionais em uma plataforma única, permitindo que sua
                             equipe gerencie cada etapa da instalação de painéis solares de forma simples e eficiente.
                             Elimina a fragmentação de sistemas e tenha total controle em um só lugar.</p>
                     </div>
 
-                    <div class="feature-card bg-white p-6 rounded-3xl shadow-md min-h-[432px]" data-category="all">
+                    <div class="feature-card bg-white p-6 rounded-2xl shadow-md min-h-[400px] md:max-w-xs" data-category="all">
                         <div class="flex items-center gap-4 mb-4">
                             <div
-                                class="min-[1300px]:p-5 p-3.5 bg-secondary rounded-3xl flex items-center justify-center">
-                                <svg class="min-[1300px]:w-[90px] w-[70px]" viewBox="0 0 100 100" fill="none"
+                                class=" p-3.5 bg-secondary rounded-xl flex items-center justify-center">
+                                <svg class=" w-[70px]" viewBox="0 0 100 100" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M70.8334 87.5V79.1667C70.8334 74.7464 69.0775 70.5072 65.9519 67.3816C62.8263 64.256 58.587 62.5 54.1667 62.5H20.8334C16.4131 62.5 12.1739 64.256 9.0483 67.3816C5.9227 70.5072 4.16675 74.7464 4.16675 79.1667V87.5"
@@ -155,19 +154,19 @@
                                         stroke-linejoin="round" />
                                 </svg>
                             </div>
-                            <h3 class="text-xl min-[1300px]:text-[23px] font-bold text-secondary break-words">Gestão de Leads e
+                            <h3 class="text-xl font-bold text-secondary break-words">Gestão de Leads e
                                 Clientes</h3>
                         </div>
-                        <p class="text-secondary text-[18px] font-medium">Capture e gerencie seus leads de forma
+                        <p class="text-secondary text-base font-medium">Capture e gerencie seus leads de forma
                             eficiente. O SolarFlow facilita o acompanhamento de clientes, desde o primeiro contato até a
                             instalação final, garantindo uma experiência personalizada e ágil para cada cliente.</p>
                     </div>
 
-                    <div class="feature-card bg-white p-6 rounded-3xl shadow-md min-h-[432px]" data-category="all">
+                    <div class="feature-card bg-white p-6 rounded-2xl shadow-md min-h-[400px] md:max-w-xs" data-category="all">
                         <div class="flex items-center gap-4 mb-4">
                             <div
-                                class="min-[1300px]:p-5 p-3.5 bg-secondary rounded-3xl flex items-center justify-center">
-                                <svg class="min-[1300px]:w-[90px] w-[70px]" viewBox="0 0 100 100" fill="none"
+                                class=" p-3.5 bg-secondary rounded-2xl flex items-center justify-center">
+                                <svg class=" w-[70px]" viewBox="0 0 100 100" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path d="M68.75 39.1665L31.25 17.5415" stroke="white" stroke-width="5"
                                         stroke-linecap="round" stroke-linejoin="round" />
@@ -181,22 +180,20 @@
                                         stroke-linejoin="round" />
                                 </svg>
                             </div>
-                            <h3 class="text-xl min-[1300px]:text-[23px] font-bold text-secondary break-words">Gestão de Estoque e
+                            <h3 class="text-xl font-bold text-secondary break-words">Gestão de Estoque e
                                 Produtos</h3>
                         </div>
-                        <p class="text-secondary text-[18px] font-medium">Controle o estoque de seus materiais de
+                        <p class="text-secondary text-base font-medium">Controle o estoque de seus materiais de
                             instalação com facilidade. O SolarFlow oferece uma visão clara das quantidades de produtos
                             em estoque, notificações automáticas para reposição e o gerenciamento de lotes de maneira
                             simplificada.</p>
                     </div>
 
                     <!-- AUTOMAÇÃO -->
-                    <div class="feature-card bg-white p-6 rounded-3xl shadow-md min-h-[432px] hidden"
-                        data-category="automation">
+                    <div class="feature-card bg-white p-6 rounded-2xl shadow-md min-h-[400px] md:max-w-xs hidden" data-category="automation">
                         <div class="flex items-center gap-4 mb-4">
-                            <div
-                                class="min-[1300px]:p-5 p-3.5 bg-secondary rounded-3xl flex items-center justify-center">
-                                <svg class="min-[1300px]:w-[90px] w-[70px]" viewBox="0 0 100 100" fill="none"
+                            <div class="p-3.5 bg-secondary rounded-2xl flex items-center justify-center">
+                                <svg class=" w-[70px]" viewBox="0 0 100 100" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path d="M16.6667 87.5002V58.3335" stroke="white" stroke-width="5"
                                         stroke-linecap="round" stroke-linejoin="round" />
@@ -218,20 +215,20 @@
                                         stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
                             </div>
-                            <h3 class="text-xl min-[1300px]:text-[23px] font-bold text-secondary break-words">Automação de Tarefas e
+                            <h3 class="text-xl  font-bold text-secondary break-words">Automação de Tarefas e
                                 Processos</h3>
                         </div>
-                        <p class="text-secondary text-[18px] font-medium">O SolarFlow cuida de tarefas repetitivas
+                        <p class="text-secondary text-base font-medium">O SolarFlow cuida de tarefas repetitivas
                             automaticamente, como criar ordens de serviço ou agendar visitas. Isso libera sua equipe
                             para se concentrar em tarefas mais importantes.</p>
                     </div>
 
-                    <div class="feature-card bg-white p-6 rounded-3xl shadow-md min-h-[432px] hidden"
+                    <div class="feature-card bg-white p-6 rounded-2xl shadow-md min-h-[400px] md:max-w-xs hidden"
                         data-category="automation">
                         <div class="flex items-center gap-4 mb-4">
                             <div
-                                class="min-[1300px]:p-5 p-3.5 bg-secondary rounded-3xl flex items-center justify-center">
-                                <svg class="min-[1300px]:w-[90px] w-[70px]" viewBox="0 0 100 100" fill="none"
+                                class=" p-3.5 bg-secondary rounded-2xl flex items-center justify-center">
+                                <svg class=" w-[70px]" viewBox="0 0 100 100" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M70.8333 8.3335H29.1666C24.5642 8.3335 20.8333 12.0645 20.8333 16.6668V83.3335C20.8333 87.9359 24.5642 91.6668 29.1666 91.6668H70.8333C75.4356 91.6668 79.1666 87.9359 79.1666 83.3335V16.6668C79.1666 12.0645 75.4356 8.3335 70.8333 8.3335Z"
@@ -241,20 +238,20 @@
                                         stroke-linejoin="round" />
                                 </svg>
                             </div>
-                            <h3 class="text-xl min-[1300px]:text-[23px] font-bold text-secondary break-words">Notificações Automáticas
+                            <h3 class="text-xl font-bold text-secondary break-words">Notificações Automáticas
                                 para Clientes</h3>
                         </div>
-                        <p class="text-secondary text-[18px] font-medium">O SolarFlow envia automaticamente lembretes e
+                        <p class="text-secondary text-base font-medium">O SolarFlow envia automaticamente lembretes e
                             atualizações para seus clientes e em potencial, mantendo todos informados e engajados
                             durante o processo de instalação. Aumentando assim, a taxa de conversão.</p>
                     </div>
 
-                    <div class="feature-card bg-white p-6 rounded-3xl shadow-md min-h-[432px] hidden"
+                    <div class="feature-card bg-white p-6 rounded-2xl shadow-md min-h-[400px] md:max-w-xs hidden"
                         data-category="automation">
                         <div class="flex items-center gap-4 mb-4">
                             <div
-                                class="min-[1300px]:p-5 p-3.5 bg-secondary rounded-3xl flex items-center justify-center">
-                                <svg class="min-[1300px]:w-[90px] w-[70px]" viewBox="0 0 100 100" fill="none"
+                                class=" p-3.5 bg-secondary rounded-2xl flex items-center justify-center">
+                                <svg class=" w-[70px]" viewBox="0 0 100 100" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M50 62.5C56.9036 62.5 62.5 56.9036 62.5 50C62.5 43.0964 56.9036 37.5 50 37.5C43.0964 37.5 37.5 43.0964 37.5 50C37.5 56.9036 43.0964 62.5 50 62.5Z"
@@ -266,21 +263,21 @@
                                         stroke-linejoin="round" />
                                 </svg>
                             </div>
-                            <h3 class="text-xl min-[1300px]:text-[23px] font-bold text-secondary break-words">Ações Automáticas com
+                            <h3 class="text-xl font-bold text-secondary break-words">Ações Automáticas com
                                 Gatilhos</h3>
                         </div>
-                        <p class="text-secondary text-[18px] font-medium">O SolarFlow permite ativar ações automáticas,
+                        <p class="text-secondary text-base font-medium">O SolarFlow permite ativar ações automáticas,
                             como enviar propostas ou criar tarefas, assim que eventos específicos acontecem, tornando o
                             processo mais rápido e eficiente.</p>
                     </div>
 
                     <!-- ANÁLISE E RELATÓRIOS -->
-                    <div class="feature-card bg-white p-6 rounded-3xl shadow-md min-h-[432px] hidden"
+                    <div class="feature-card bg-white p-6 rounded-2xl shadow-md min-h-[400px] md:max-w-xs hidden"
                         data-category="analytics">
                         <div class="flex items-center gap-4 mb-4">
                             <div
-                                class="min-[1300px]:p-5 p-3.5 bg-secondary rounded-3xl flex items-center justify-center">
-                                <svg class="min-[1300px]:w-[90px] w-[70px]" viewBox="0 0 100 100" fill="none"
+                                class="p-3.5 bg-secondary rounded-2xl flex items-center justify-center">
+                                <svg class="w-[70px]" viewBox="0 0 100 100" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M88.3749 66.2082C85.7242 72.4768 81.5782 78.0007 76.2994 82.2969C71.0206 86.5931 64.7698 89.5308 58.0934 90.8531C51.417 92.1754 44.5183 91.8421 38.0005 89.8823C31.4827 87.9225 25.5442 84.396 20.7041 79.6109C15.8641 74.8258 12.2699 68.928 10.2359 62.433C8.20179 55.9379 7.78973 49.0435 9.03571 42.3525C10.2817 35.6614 13.1478 29.3775 17.3834 24.05C21.619 18.7225 27.0952 14.5137 33.3332 11.7915"
@@ -293,20 +290,20 @@
                                 </svg>
 
                             </div>
-                            <h3 class="text-xl min-[1300px]:text-[23px] font-bold text-secondary break-words">Relatórios de Desempenho
+                            <h3 class="text-xl  font-bold text-secondary break-words">Relatórios de Desempenho
                                 em Tempo Real</h3>
                         </div>
-                        <p class="text-secondary text-[18px] font-medium">O SolarFlow oferece relatórios atualizados em
+                        <p class="text-secondary text-base font-medium">O SolarFlow oferece relatórios atualizados em
                             tempo real sobre vendas, produtividade e status de instalação. Isso ajuda você a acompanhar
                             o desempenho da sua empresa e tomar decisões rápidas para melhorar os resultados.</p>
                     </div>
 
-                    <div class="feature-card bg-white p-6 rounded-3xl shadow-md min-h-[432px] hidden"
+                    <div class="feature-card bg-white p-6 rounded-2xl shadow-md min-h-[400px] md:max-w-xs hidden"
                         data-category="analytics">
                         <div class="flex items-center gap-4 mb-4">
                             <div
-                                class="min-[1300px]:p-5 p-3.5 bg-secondary rounded-3xl flex items-center justify-center">
-                                <svg class="min-[1300px]:w-[90px] w-[70px]" viewBox="0 0 100 100" fill="none"
+                                class=" p-3.5 bg-secondary rounded-2xl flex items-center justify-center">
+                                <svg class="w-[70px]" viewBox="0 0 100 100" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path d="M68.75 39.1665L31.25 17.5415" stroke="white" stroke-width="5"
                                         stroke-linecap="round" stroke-linejoin="round" />
@@ -320,20 +317,20 @@
                                         stroke-linejoin="round" />
                                 </svg>
                             </div>
-                            <h3 class="text-xl min-[1300px]:text-[23px] font-bold text-secondary break-words">Relatórios sobre o
+                            <h3 class="text-xl font-bold text-secondary break-words">Relatórios sobre o
                                 Estoque de Produtos</h3>
                         </div>
-                        <p class="text-secondary text-[18px] font-medium">O SolarFlow gera relatórios detalhados sobre o
+                        <p class="text-secondary text-base font-medium">O SolarFlow gera relatórios detalhados sobre o
                             estoque, mostrando entradas, saídas e a quantidade atual de produtos. Isso facilita o
                             controle de materiais e evita a falta de itens durante as instalações.</p>
                     </div>
 
-                    <div class="feature-card bg-white p-6 rounded-3xl shadow-md min-h-[432px] hidden"
+                    <div class="feature-card bg-white p-6 rounded-2xl shadow-md min-h-[400px] md:max-w-xs hidden"
                         data-category="analytics">
                         <div class="flex items-center gap-4 mb-4">
                             <div
-                                class="min-[1300px]:p-5 p-3.5 bg-secondary rounded-3xl flex items-center justify-center">
-                                <svg class="min-[1300px]:w-[90px] w-[70px]" viewBox="0 0 100 100" fill="none"
+                                class=" p-3.5 bg-secondary rounded-2xl flex items-center justify-center">
+                                <svg class=" w-[70px]" viewBox="0 0 100 100" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M70.8334 87.5V79.1667C70.8334 74.7464 69.0775 70.5072 65.9519 67.3816C62.8263 64.256 58.587 62.5 54.1667 62.5H20.8334C16.4131 62.5 12.1739 64.256 9.0483 67.3816C5.9227 70.5072 4.16675 74.7464 4.16675 79.1667V87.5"
@@ -353,21 +350,21 @@
                                         stroke-linejoin="round" />
                                 </svg>
                             </div>
-                            <h3 class="text-xl min-[1300px]:text-[23px] font-bold text-secondary break-words">Análises Detalhadas de
+                            <h3 class="text-xl font-bold text-secondary break-words">Análises Detalhadas de
                                 Leads e Clientes</h3>
                         </div>
-                        <p class="text-secondary text-[18px] font-medium">Com o SolarFlow, você pode analisar dados dos
+                        <p class="text-secondary text-base font-medium">Com o SolarFlow, você pode analisar dados dos
                             seus leads e clientes, como interesses e histórico de interação. Isso permite personalizar a
                             abordagem e melhorar a conversão em vendas.</p>
                     </div>
 
                     <!-- MONITORAMENTO EM TEMPO REAL -->
-                    <div class="feature-card bg-white p-6 rounded-3xl shadow-md min-h-[432px] hidden"
+                    <div class="feature-card bg-white p-6 rounded-2xl shadow-md min-h-[400px] md:max-w-xs hidden"
                         data-category="monitoring">
                         <div class="flex items-center gap-4 mb-4">
                             <div
-                                class="min-[1300px]:p-5 p-3.5 bg-secondary rounded-3xl flex items-center justify-center">
-                                <svg class="min-[1300px]:w-[90px] w-[70px]" viewBox="0 0 100 100" fill="none"
+                                class=" p-3.5 bg-secondary rounded-2xl flex items-center justify-center">
+                                <svg class=" w-[70px]" viewBox="0 0 100 100" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M87.5 41.667C87.5 70.8337 50 95.8337 50 95.8337C50 95.8337 12.5 70.8337 12.5 41.667C12.5 31.7214 16.4509 22.1831 23.4835 15.1505C30.5161 8.11787 40.0544 4.16699 50 4.16699C59.9456 4.16699 69.4839 8.11787 76.5165 15.1505C83.5491 22.1831 87.5 31.7214 87.5 41.667Z"
@@ -379,20 +376,20 @@
                                         stroke-linejoin="round" />
                                 </svg>
                             </div>
-                            <h3 class="text-xl min-[1300px]:text-[23px] font-bold text-secondary break-words">Rastreamento de
+                            <h3 class="text-xl  font-bold text-secondary break-words">Rastreamento de
                                 Funcionários de Campo</h3>
                         </div>
-                        <p class="text-secondary text-[18px] font-medium">O SolarFlow permite monitorar a localização
+                        <p class="text-secondary text-base font-medium">O SolarFlow permite monitorar a localização
                             dos funcionários de campo em tempo real, ajudando a otimizar as rotas e garantir que as
                             equipes cheguem aos locais de instalação de maneira eficiente e pontual.</p>
                     </div>
 
-                    <div class="feature-card bg-white p-6 rounded-3xl shadow-md min-h-[432px] hidden"
+                    <div class="feature-card bg-white p-6 rounded-2xl shadow-md min-h-[400px] md:max-w-xs hidden"
                         data-category="monitoring">
                         <div class="flex items-center gap-4 mb-4">
                             <div
-                                class="min-[1300px]:p-5 p-3.5 bg-secondary rounded-3xl flex items-center justify-center">
-                                <svg class="min-[1300px]:w-[90px] w-[70px]" viewBox="0 0 100 100" fill="none"
+                                class=" p-3.5 bg-secondary rounded-2xl flex items-center justify-center">
+                                <svg class=" w-[70px]" viewBox="0 0 100 100" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path d="M50 8.33301V24.9997" stroke="white" stroke-width="5" stroke-linecap="round"
                                         stroke-linejoin="round" />
@@ -412,20 +409,20 @@
                                         stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
                             </div>
-                            <h3 class="text-xl min-[1300px]:text-[23px] font-bold text-secondary break-words">Acompanhamento do
+                            <h3 class="text-xl  font-bold text-secondary break-words">Acompanha<wbr>mento do
                                 Progresso da Instalação</h3>
                         </div>
-                        <p class="text-secondary text-[18px] font-medium">Com o SolarFlow, você pode acompanhar o
+                        <p class="text-secondary text-base font-medium">Com o SolarFlow, você pode acompanhar o
                             andamento das instalações em tempo real, garantindo que todas as etapas do processo sejam
                             concluídas no prazo e conforme o planejado.</p>
                     </div>
 
-                    <div class="feature-card bg-white p-6 rounded-3xl shadow-md min-h-[432px] hidden"
+                    <div class="feature-card bg-white p-6 rounded-2xl shadow-md min-h-[400px] md:max-w-xs hidden"
                         data-category="monitoring">
                         <div class="flex items-center gap-4 mb-4">
                             <div
-                                class="min-[1300px]:p-5 p-3.5 bg-secondary rounded-3xl flex items-center justify-center">
-                                <svg class="min-[1300px]:w-[90px] w-[70px]" viewBox="0 0 100 100" fill="none"
+                                class=" p-3.5 bg-secondary rounded-2xl flex items-center justify-center">
+                                <svg class="w-[70px]" viewBox="0 0 100 100" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path d="M16.6667 87.4997V58.333" stroke="white" stroke-width="5"
                                         stroke-linecap="round" stroke-linejoin="round" />
@@ -447,10 +444,10 @@
                                         stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
                             </div>
-                            <h3 class="text-xl min-[1300px]:text-[23px] font-bold text-secondary break-words">Monitoramento dos
+                            <h3 class="text-xl font-bold text-secondary break-words">Monitoramento dos
                                 Sistemas Instalados</h3>
                         </div>
-                        <p class="text-secondary text-[18px] font-medium">O SolarFlow permite monitorar a localização
+                        <p class="text-secondary text-base font-medium">O SolarFlow permite monitorar a localização
                             dos sistemas de energia solar dos seus clientes em tempo real, associando-os aos seus
                             respectivos leads e históricos de atendimento, garantindo uma gestão mais eficiente e melhor
                             acompanhamento pós-instalação.</p>
@@ -493,12 +490,10 @@
                 </div>
 
                 <!-- Botão de contato -->
-                <div class="article__button-container">
-                    <a target="_blank"
-                        href="https://wa.me/+5577991216617?text=Ol%C3%A1!%20Estou%20muito%20interessado%20em%20conhecer%20mais%20sobre%20o%20SolarFlow%20e%20como%20ele%20pode%20beneficiar%20minha%20empresa!"
-                        class="button button--cta bg-secondary text-white flex flex-row items-center gap-2 p-3 lg:p-4 rounded-lg w-fit hover:scale-[1.01] hover:bg-hover-blue trasition-all duration-500 m-auto">
-                        <span class="button__content font-semibold lg:text-2xl text-sm">ENTRE EM CONTATO</span>
-                        <img class="button__icon w-6 lg:w-9" src="assets/icons/arrow-up-right--white.svg" alt="">
+                <div class="article__button-container flex justify-center">
+                    <a target="_blank" href="https://wa.me/+5577991216617?text=Ol%C3%A1!%20Estou%20muito%20interessado%20em%20conhecer%20mais%20sobre%20o%20SolarFlow%20e%20como%20ele%20pode%20beneficiar%20minha%20empresa!" class="button button--cta bg-blue text-white flex flex-row items-center gap-2 p-4 text-[18px] rounded-lg w-fit hover:scale-[1.01] hover:bg-hover-blue trasition-all duration-500">
+                        <span class="button__content poppins-semibold">ENTRE EM CONTATO</span>
+                        <img class="button__icon w-6" src="assets/icons/arrow-up-right--white.svg" alt="">
                     </a>
                 </div>
             </div>
