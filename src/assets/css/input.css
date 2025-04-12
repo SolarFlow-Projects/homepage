@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "./base/typography.css";
 
-@theme{
+@theme {
     --color-main: #17A589;
     --color-secondary: #0B2B3F;
     --color-tertiare-white: #FFFFFF;
@@ -19,4 +19,13 @@
     --color-hover-white: #CECECE;
     --color-hover-cyan: #13997F;
     --color-hover-blue: #092232;
+}
+
+@layer components {
+    .dark-shadow-button {
+        box-shadow:
+            5px 5px 20px 0 rgba(0, 0, 0, 0.25),
+            -5px -5px 20px 0 rgba(255, 255, 255, 0.25),
+            0 0 50px 0 rgba(0, 102, 167, 0.5);
+    }
 }
