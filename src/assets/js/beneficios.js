@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const categories = ['all', 'automation', 'analytics', 'monitoring'];
 
     // Verificar se estamos em modo mobile
-    const isMobile = window.innerWidth < 768;
+    const isMobile = window.innerWidth < 1024;
 
     // Inicializar a visualização desktop
     if (!isMobile) {
@@ -24,12 +24,12 @@ document.addEventListener('DOMContentLoaded', function () {
         button.addEventListener('click', function () {
             // Atualizar estado dos botões
             filterButtons.forEach(btn => {
-                btn.classList.remove('active');
+                btn.classList.remove('active', 'dark-shadow-button');
                 btn.classList.add('bg-white', 'text-secondary');
                 btn.classList.remove('bg-secondary', 'text-white');
             });
 
-            this.classList.add('active');
+            this.classList.add('active', 'dark-shadow-button');
             this.classList.remove('bg-white', 'text-secondary');
             this.classList.add('bg-secondary', 'text-white');
 
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Detectar redimensionamento da janela para alternar entre modos
     window.addEventListener('resize', function () {
-        const newIsMobile = window.innerWidth < 768;
+        const newIsMobile = window.innerWidth < 1024;
 
         // Se houve mudança no modo de visualização
         if (newIsMobile !== isMobile) {
