@@ -82,67 +82,62 @@
         </section>
 
         <!-- Beneficios -->
-        <section id="beneficios" class="main__background lg:px-[5%] bg-main overflow-hidden">
+        <section id="beneficios" class="main__background lg:px-[5%] bg-main overflow-hidden" aria-label="Benefícios do SolarFlow">
             <div class="mx-auto pt-10 pb-[50px] lg:pb-[105px] max-w-[1280px] lg:flex lg:flex-col lg:items-center">
                 <!-- Título principal -->
                 <h2 data-aos="zoom-in" data-aos-duration="700" data-aos-easing="ease-out" data-aos-anchor="#hero" data-aos-offset="500" class="text-2xl lg:text-4xl font-semibold text-white text-center leading-7 max-lg:px-[5%]">
                     <strong class="font-extrabold">Tudo</strong> em um só lugar
                 </h2>
-
+        
                 <!-- Filtros/Tabs -->
-                <div data-aos="fade-right" data-aos-duration="700" data-aos-easing="ease-out" class="relative w-full">
+                <div data-aos="fade-right" data-aos-duration="700" data-aos-easing="ease-out" class="relative w-full" role="tablist" aria-label="Categorias de recursos">
                     <div class="flex lg:justify-center overflow-x-scroll whitespace-nowrap gap-3 pb-8 pt-5 lg:pt-10 scroll scrollbar-hide w-full max-lg:px-[5%]">
                         <button
-                            class="filter-btn active inline-block px-5 py-2 rounded-full bg-secondary dark-shadow-button text-white hover:bg-secondary hover:text-white transition duration-300 text-lg font-semibold"
-                            data-filter="all">Gestão de Processos</button>
+                            class="filter-btn active inline-block px-5 py-2 rounded-full bg-secondary dark-shadow-button text-white hover:bg-secondary hover:text-white transition duration-300 text-lg font-semibold cursor-pointer "
+                            data-filter="all" role="tab" aria-selected="true" aria-pressed="true" aria-controls="swiper-all">Gestão de Processos</button>
                         <button
-                            class="filter-btn inline-block px-5 py-2 rounded-full bg-white text-secondary hover:bg-secondary hover:text-white transition duration-300 text-lg font-semibold"
-                            data-filter="automation">Automação</button>
+                            class="filter-btn inline-block px-5 py-2 rounded-full bg-white text-secondary hover:bg-secondary hover:text-white transition duration-300 text-lg font-semibold cursor-pointer"
+                            data-filter="automation" role="tab" aria-selected="false" aria-pressed="false" aria-controls="swiper-automation">Automação</button>
                         <button
-                            class="filter-btn inline-block px-5 py-2 rounded-full bg-white text-secondary hover:bg-secondary hover:text-white transition duration-300 text-lg font-semibold"
-                            data-filter="analytics">Análise e Relatórios</button>
+                            class="filter-btn inline-block px-5 py-2 rounded-full bg-white text-secondary hover:bg-secondary hover:text-white transition duration-300 text-lg font-semibold cursor-pointer"
+                            data-filter="analytics" role="tab" aria-selected="false" aria-pressed="false" aria-controls="swiper-analytics">Análise e Relatórios</button>
                         <button
-                            class="filter-btn inline-block px-5 py-2 rounded-full bg-white text-secondary hover:bg-secondary hover:text-white transition duration-300 text-lg font-semibold"
-                            data-filter="monitoring">Monitoramento em Tempo Real</button>
+                            class="filter-btn inline-block px-5 py-2 rounded-full bg-white text-secondary hover:bg-secondary hover:text-white transition duration-300 text-lg font-semibold cursor-pointer"
+                            data-filter="monitoring" role="tab" aria-selected="false" aria-pressed="false" aria-controls="swiper-monitoring">Monitoramento em Tempo Real</button>
                     </div>
                     <div
-                        class="lg:hidden lg:invisible absolute inset-0 pointer-events-none shadow-[inset_-40px_0_30px_-10px_rgba(23,165,137)] z-10">
+                        class="lg:hidden lg:invisible absolute inset-0 pointer-events-none shadow-[inset_-40px_0_30px_-10px_rgba(23,165,137)] z-10" 
+                        aria-hidden="true">
                     </div>
                 </div>
-
+        
                 <!-- Cards de recursos - versão desktop (grid) -->
-                <div data-aos="fade-up" data-aos-duration="700" data-aos-easing="ease-out" class="desktop-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-fit justify-center gap-6 mb-10 px-[5%]">
+                <div data-aos="fade-up" data-aos-duration="700" data-aos-easing="ease-out" class="desktop-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-fit justify-center gap-6 mb-10">
                     <!-- GESTÃO DE PROCESSOS -->
-                    <div class="feature-card bg-white p-6 rounded-2xl shadow-md min-h-[400px] lg:max-w-xs" data-category="all">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class=" p-3.5 bg-secondary rounded-2xl flex items-center justify-center">
-                                <svg class=" w-[70px]" viewBox="0 0 105 95" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <rect x="2.5" y="2.5" width="45" height="55" rx="7.5" stroke="white"
-                                        stroke-width="5" />
-                                    <rect x="2.5" y="67.5" width="45" height="25" rx="7.5" stroke="white"
-                                        stroke-width="5" />
-                                    <rect x="57.5" y="2.5" width="45" height="25" rx="7.5" stroke="white"
-                                        stroke-width="5" />
-                                    <rect x="57.5" y="37.5" width="45" height="55" rx="7.5" stroke="white"
-                                        stroke-width="5" />
+                    <article class="feature-card bg-white p-6 rounded-2xl shadow-md min-h-[400px] lg:max-w-xs" data-category="all">
+                        <header class="flex items-center gap-4 mb-4">
+                            <div class="p-3.5 bg-secondary rounded-2xl flex items-center justify-center">
+                                <svg class="w-[70px]" viewBox="0 0 105 95" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title-gestao-centralizada">
+                                    <title id="title-gestao-centralizada">Ícone de gestão centralizada</title>
+                                    <rect x="2.5" y="2.5" width="45" height="55" rx="7.5" stroke="white" stroke-width="5" />
+                                    <rect x="2.5" y="67.5" width="45" height="25" rx="7.5" stroke="white" stroke-width="5" />
+                                    <rect x="57.5" y="2.5" width="45" height="25" rx="7.5" stroke="white" stroke-width="5" />
+                                    <rect x="57.5" y="37.5" width="45" height="55" rx="7.5" stroke="white" stroke-width="5" />
                                 </svg>
                             </div>
-                            <h3 class="text-xl font-bold text-secondary break-words">Gestão Centralizada de
-                                Processos</h3>
-                        </div>
+                            <h3 class="text-xl font-bold text-secondary break-words">Gestão Centralizada de Processos</h3>
+                        </header>
                         <p class="text-secondary text-base font-medium"><span class="font-normal">O SolarFlow</span>
                             centraliza todos os processos operacionais em uma plataforma única, permitindo que sua
                             equipe gerencie cada etapa da instalação de painéis solares de forma simples e eficiente.
                             Elimina a fragmentação de sistemas e tenha total controle em um só lugar.</p>
-                    </div>
-
-                    <div class="feature-card bg-white p-6 rounded-2xl shadow-md min-h-[400px] lg:max-w-xs" data-category="all">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div
-                                class=" p-3.5 bg-secondary rounded-xl flex items-center justify-center">
-                                <svg class=" w-[70px]" viewBox="0 0 100 100" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
+                    </article>
+        
+                    <article class="feature-card bg-white p-6 rounded-2xl shadow-md min-h-[400px] lg:max-w-xs" data-category="all">
+                        <header class="flex items-center gap-4 mb-4">
+                            <div class="p-3.5 bg-secondary rounded-xl flex items-center justify-center">
+                                <svg class="w-[70px]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title-gestao-leads">
+                                    <title id="title-gestao-leads">Ícone de gestão de leads</title>
                                     <path
                                         d="M70.8334 87.5V79.1667C70.8334 74.7464 69.0775 70.5072 65.9519 67.3816C62.8263 64.256 58.587 62.5 54.1667 62.5H20.8334C16.4131 62.5 12.1739 64.256 9.0483 67.3816C5.9227 70.5072 4.16675 74.7464 4.16675 79.1667V87.5"
                                         stroke="white" stroke-width="5" stroke-linecap="round"
@@ -161,20 +156,18 @@
                                         stroke-linejoin="round" />
                                 </svg>
                             </div>
-                            <h3 class="text-xl font-bold text-secondary break-words">Gestão de Leads e
-                                Clientes</h3>
-                        </div>
+                            <h3 class="text-xl font-bold text-secondary break-words">Gestão de Leads e Clientes</h3>
+                        </header>
                         <p class="text-secondary text-base font-medium">Capture e gerencie seus leads de forma
                             eficiente. O SolarFlow facilita o acompanhamento de clientes, desde o primeiro contato até a
                             instalação final, garantindo uma experiência personalizada e ágil para cada cliente.</p>
-                    </div>
-
-                    <div class="feature-card bg-white p-6 rounded-2xl shadow-md min-h-[400px] lg:max-w-xs" data-category="all">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div
-                                class=" p-3.5 bg-secondary rounded-2xl flex items-center justify-center">
-                                <svg class=" w-[70px]" viewBox="0 0 100 100" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
+                    </article>
+        
+                    <article class="feature-card bg-white p-6 rounded-2xl shadow-md min-h-[400px] lg:max-w-xs" data-category="all">
+                        <header class="flex items-center gap-4 mb-4">
+                            <div class="p-3.5 bg-secondary rounded-2xl flex items-center justify-center">
+                                <svg class="w-[70px]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title-gestao-estoque">
+                                    <title id="title-gestao-estoque">Ícone de gestão de estoque</title>
                                     <path d="M68.75 39.1665L31.25 17.5415" stroke="white" stroke-width="5"
                                         stroke-linecap="round" stroke-linejoin="round" />
                                     <path
@@ -187,21 +180,20 @@
                                         stroke-linejoin="round" />
                                 </svg>
                             </div>
-                            <h3 class="text-xl font-bold text-secondary break-words">Gestão de Estoque e
-                                Produtos</h3>
-                        </div>
+                            <h3 class="text-xl font-bold text-secondary break-words">Gestão de Estoque e Produtos</h3>
+                        </header>
                         <p class="text-secondary text-base font-medium">Controle o estoque de seus materiais de
                             instalação com facilidade. O SolarFlow oferece uma visão clara das quantidades de produtos
                             em estoque, notificações automáticas para reposição e o gerenciamento de lotes de maneira
                             simplificada.</p>
-                    </div>
-
+                    </article>
+        
                     <!-- AUTOMAÇÃO -->
-                    <div class="feature-card bg-white p-6 rounded-2xl shadow-md min-h-[400px] lg:max-w-xs hidden" data-category="automation">
-                        <div class="flex items-center gap-4 mb-4">
+                    <article class="feature-card bg-white p-6 rounded-2xl shadow-md min-h-[400px] lg:max-w-xs hidden" data-category="automation">
+                        <header class="flex items-center gap-4 mb-4">
                             <div class="p-3.5 bg-secondary rounded-2xl flex items-center justify-center">
-                                <svg class=" w-[70px]" viewBox="0 0 100 100" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
+                                <svg class="w-[70px]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title-automacao-tarefas">
+                                    <title id="title-automacao-tarefas">Ícone de automação de tarefas</title>
                                     <path d="M16.6667 87.5002V58.3335" stroke="white" stroke-width="5"
                                         stroke-linecap="round" stroke-linejoin="round" />
                                     <path d="M16.6667 41.6667V12.5" stroke="white" stroke-width="5"
@@ -222,21 +214,19 @@
                                         stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
                             </div>
-                            <h3 class="text-xl  font-bold text-secondary break-words">Automação de Tarefas e
-                                Processos</h3>
-                        </div>
+                            <h3 class="text-xl font-bold text-secondary break-words">Automação de Tarefas e Processos</h3>
+                        </header>
                         <p class="text-secondary text-base font-medium">O SolarFlow cuida de tarefas repetitivas
                             automaticamente, como criar ordens de serviço ou agendar visitas. Isso libera sua equipe
                             para se concentrar em tarefas mais importantes.</p>
-                    </div>
-
-                    <div class="feature-card bg-white p-6 rounded-2xl shadow-md min-h-[400px] lg:max-w-xs hidden"
+                    </article>
+        
+                    <article class="feature-card bg-white p-6 rounded-2xl shadow-md min-h-[400px] lg:max-w-xs hidden"
                         data-category="automation">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div
-                                class=" p-3.5 bg-secondary rounded-2xl flex items-center justify-center">
-                                <svg class=" w-[70px]" viewBox="0 0 100 100" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
+                        <header class="flex items-center gap-4 mb-4">
+                            <div class="p-3.5 bg-secondary rounded-2xl flex items-center justify-center">
+                                <svg class="w-[70px]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title-notificacoes-automaticas">
+                                    <title id="title-notificacoes-automaticas">Ícone de notificações automáticas</title>
                                     <path
                                         d="M70.8333 8.3335H29.1666C24.5642 8.3335 20.8333 12.0645 20.8333 16.6668V83.3335C20.8333 87.9359 24.5642 91.6668 29.1666 91.6668H70.8333C75.4356 91.6668 79.1666 87.9359 79.1666 83.3335V16.6668C79.1666 12.0645 75.4356 8.3335 70.8333 8.3335Z"
                                         stroke="white" stroke-width="5" stroke-linecap="round"
@@ -245,21 +235,19 @@
                                         stroke-linejoin="round" />
                                 </svg>
                             </div>
-                            <h3 class="text-xl font-bold text-secondary break-words">Notificações Automáticas
-                                para Clientes</h3>
-                        </div>
+                            <h3 class="text-xl font-bold text-secondary break-words">Notificações Automáticas para Clientes</h3>
+                        </header>
                         <p class="text-secondary text-base font-medium">O SolarFlow envia automaticamente lembretes e
                             atualizações para seus clientes e em potencial, mantendo todos informados e engajados
                             durante o processo de instalação. Aumentando assim, a taxa de conversão.</p>
-                    </div>
-
-                    <div class="feature-card bg-white p-6 rounded-2xl shadow-md min-h-[400px] lg:max-w-xs hidden"
+                    </article>
+        
+                    <article class="feature-card bg-white p-6 rounded-2xl shadow-md min-h-[400px] lg:max-w-xs hidden"
                         data-category="automation">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div
-                                class=" p-3.5 bg-secondary rounded-2xl flex items-center justify-center">
-                                <svg class=" w-[70px]" viewBox="0 0 100 100" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
+                        <header class="flex items-center gap-4 mb-4">
+                            <div class="p-3.5 bg-secondary rounded-2xl flex items-center justify-center">
+                                <svg class="w-[70px]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title-acoes-automaticas">
+                                    <title id="title-acoes-automaticas">Ícone de ações automáticas</title>
                                     <path
                                         d="M50 62.5C56.9036 62.5 62.5 56.9036 62.5 50C62.5 43.0964 56.9036 37.5 50 37.5C43.0964 37.5 37.5 43.0964 37.5 50C37.5 56.9036 43.0964 62.5 50 62.5Z"
                                         stroke="white" stroke-width="5" stroke-linecap="round"
@@ -270,22 +258,20 @@
                                         stroke-linejoin="round" />
                                 </svg>
                             </div>
-                            <h3 class="text-xl font-bold text-secondary break-words">Ações Automáticas com
-                                Gatilhos</h3>
-                        </div>
+                            <h3 class="text-xl font-bold text-secondary break-words">Ações Automáticas com Gatilhos</h3>
+                        </header>
                         <p class="text-secondary text-base font-medium">O SolarFlow permite ativar ações automáticas,
                             como enviar propostas ou criar tarefas, assim que eventos específicos acontecem, tornando o
                             processo mais rápido e eficiente.</p>
-                    </div>
-
+                    </article>
+        
                     <!-- ANÁLISE E RELATÓRIOS -->
-                    <div class="feature-card bg-white p-6 rounded-2xl shadow-md min-h-[400px] lg:max-w-xs hidden"
+                    <article class="feature-card bg-white p-6 rounded-2xl shadow-md min-h-[400px] lg:max-w-xs hidden"
                         data-category="analytics">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div
-                                class="p-3.5 bg-secondary rounded-2xl flex items-center justify-center">
-                                <svg class="w-[70px]" viewBox="0 0 100 100" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
+                        <header class="flex items-center gap-4 mb-4">
+                            <div class="p-3.5 bg-secondary rounded-2xl flex items-center justify-center">
+                                <svg class="w-[70px]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title-relatorios-desempenho">
+                                    <title id="title-relatorios-desempenho">Ícone de relatórios de desempenho</title>
                                     <path
                                         d="M88.3749 66.2082C85.7242 72.4768 81.5782 78.0007 76.2994 82.2969C71.0206 86.5931 64.7698 89.5308 58.0934 90.8531C51.417 92.1754 44.5183 91.8421 38.0005 89.8823C31.4827 87.9225 25.5442 84.396 20.7041 79.6109C15.8641 74.8258 12.2699 68.928 10.2359 62.433C8.20179 55.9379 7.78973 49.0435 9.03571 42.3525C10.2817 35.6614 13.1478 29.3775 17.3834 24.05C21.619 18.7225 27.0952 14.5137 33.3332 11.7915"
                                         stroke="white" stroke-width="5" stroke-linecap="round"
@@ -295,23 +281,20 @@
                                         stroke="white" stroke-width="5" stroke-linecap="round"
                                         stroke-linejoin="round" />
                                 </svg>
-
                             </div>
-                            <h3 class="text-xl  font-bold text-secondary break-words">Relatórios de Desempenho
-                                em Tempo Real</h3>
-                        </div>
+                            <h3 class="text-xl font-bold text-secondary break-words">Relatórios de Desempenho em Tempo Real</h3>
+                        </header>
                         <p class="text-secondary text-base font-medium">O SolarFlow oferece relatórios atualizados em
                             tempo real sobre vendas, produtividade e status de instalação. Isso ajuda você a acompanhar
                             o desempenho da sua empresa e tomar decisões rápidas para melhorar os resultados.</p>
-                    </div>
-
-                    <div class="feature-card bg-white p-6 rounded-2xl shadow-md min-h-[400px] lg:max-w-xs hidden"
+                    </article>
+        
+                    <article class="feature-card bg-white p-6 rounded-2xl shadow-md min-h-[400px] lg:max-w-xs hidden"
                         data-category="analytics">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div
-                                class=" p-3.5 bg-secondary rounded-2xl flex items-center justify-center">
-                                <svg class="w-[70px]" viewBox="0 0 100 100" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
+                        <header class="flex items-center gap-4 mb-4">
+                            <div class="p-3.5 bg-secondary rounded-2xl flex items-center justify-center">
+                                <svg class="w-[70px]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title-relatorios-estoque">
+                                    <title id="title-relatorios-estoque">Ícone de relatórios de estoque</title>
                                     <path d="M68.75 39.1665L31.25 17.5415" stroke="white" stroke-width="5"
                                         stroke-linecap="round" stroke-linejoin="round" />
                                     <path
@@ -324,21 +307,19 @@
                                         stroke-linejoin="round" />
                                 </svg>
                             </div>
-                            <h3 class="text-xl font-bold text-secondary break-words">Relatórios sobre o
-                                Estoque de Produtos</h3>
-                        </div>
+                            <h3 class="text-xl font-bold text-secondary break-words">Relatórios sobre o Estoque de Produtos</h3>
+                        </header>
                         <p class="text-secondary text-base font-medium">O SolarFlow gera relatórios detalhados sobre o
                             estoque, mostrando entradas, saídas e a quantidade atual de produtos. Isso facilita o
                             controle de materiais e evita a falta de itens durante as instalações.</p>
-                    </div>
-
-                    <div class="feature-card bg-white p-6 rounded-2xl shadow-md min-h-[400px] lg:max-w-xs hidden"
+                    </article>
+        
+                    <article class="feature-card bg-white p-6 rounded-2xl shadow-md min-h-[400px] lg:max-w-xs hidden"
                         data-category="analytics">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div
-                                class=" p-3.5 bg-secondary rounded-2xl flex items-center justify-center">
-                                <svg class=" w-[70px]" viewBox="0 0 100 100" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
+                        <header class="flex items-center gap-4 mb-4">
+                            <div class="p-3.5 bg-secondary rounded-2xl flex items-center justify-center">
+                                <svg class="w-[70px]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title-analises-leads">
+                                    <title id="title-analises-leads">Ícone de análises de leads</title>
                                     <path
                                         d="M70.8334 87.5V79.1667C70.8334 74.7464 69.0775 70.5072 65.9519 67.3816C62.8263 64.256 58.587 62.5 54.1667 62.5H20.8334C16.4131 62.5 12.1739 64.256 9.0483 67.3816C5.9227 70.5072 4.16675 74.7464 4.16675 79.1667V87.5"
                                         stroke="white" stroke-width="5" stroke-linecap="round"
@@ -357,22 +338,20 @@
                                         stroke-linejoin="round" />
                                 </svg>
                             </div>
-                            <h3 class="text-xl font-bold text-secondary break-words">Análises Detalhadas de
-                                Leads e Clientes</h3>
-                        </div>
+                            <h3 class="text-xl font-bold text-secondary break-words">Análises Detalhadas de Leads e Clientes</h3>
+                        </header>
                         <p class="text-secondary text-base font-medium">Com o SolarFlow, você pode analisar dados dos
                             seus leads e clientes, como interesses e histórico de interação. Isso permite personalizar a
                             abordagem e melhorar a conversão em vendas.</p>
-                    </div>
-
+                    </article>
+        
                     <!-- MONITORAMENTO EM TEMPO REAL -->
-                    <div class="feature-card bg-white p-6 rounded-2xl shadow-md min-h-[400px] lg:max-w-xs hidden"
+                    <article class="feature-card bg-white p-6 rounded-2xl shadow-md min-h-[400px] lg:max-w-xs hidden"
                         data-category="monitoring">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div
-                                class=" p-3.5 bg-secondary rounded-2xl flex items-center justify-center">
-                                <svg class=" w-[70px]" viewBox="0 0 100 100" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
+                        <header class="flex items-center gap-4 mb-4">
+                            <div class="p-3.5 bg-secondary rounded-2xl flex items-center justify-center">
+                                <svg class="w-[70px]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title-rastreamento-funcionarios">
+                                    <title id="title-rastreamento-funcionarios">Ícone de rastreamento de funcionários</title>
                                     <path
                                         d="M87.5 41.667C87.5 70.8337 50 95.8337 50 95.8337C50 95.8337 12.5 70.8337 12.5 41.667C12.5 31.7214 16.4509 22.1831 23.4835 15.1505C30.5161 8.11787 40.0544 4.16699 50 4.16699C59.9456 4.16699 69.4839 8.11787 76.5165 15.1505C83.5491 22.1831 87.5 31.7214 87.5 41.667Z"
                                         stroke="white" stroke-width="5" stroke-linecap="round"
@@ -383,21 +362,19 @@
                                         stroke-linejoin="round" />
                                 </svg>
                             </div>
-                            <h3 class="text-xl  font-bold text-secondary break-words">Rastreamento de
-                                Funcionários de Campo</h3>
-                        </div>
+                            <h3 class="text-xl font-bold text-secondary break-words">Rastreamento de Funcionários de Campo</h3>
+                        </header>
                         <p class="text-secondary text-base font-medium">O SolarFlow permite monitorar a localização
                             dos funcionários de campo em tempo real, ajudando a otimizar as rotas e garantir que as
                             equipes cheguem aos locais de instalação de maneira eficiente e pontual.</p>
-                    </div>
-
-                    <div class="feature-card bg-white p-6 rounded-2xl shadow-md min-h-[400px] lg:max-w-xs hidden"
+                    </article>
+        
+                    <article class="feature-card bg-white p-6 rounded-2xl shadow-md min-h-[400px] lg:max-w-xs hidden"
                         data-category="monitoring">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div
-                                class=" p-3.5 bg-secondary rounded-2xl flex items-center justify-center">
-                                <svg class=" w-[70px]" viewBox="0 0 100 100" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
+                        <header class="flex items-center gap-4 mb-4">
+                            <div class="p-3.5 bg-secondary rounded-2xl flex items-center justify-center">
+                                <svg class="w-[70px]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title-acompanhamento-progresso">
+                                    <title id="title-acompanhamento-progresso">Ícone de acompanhamento de progresso</title>
                                     <path d="M50 8.33301V24.9997" stroke="white" stroke-width="5" stroke-linecap="round"
                                         stroke-linejoin="round" />
                                     <path d="M50 75V91.6667" stroke="white" stroke-width="5" stroke-linecap="round"
@@ -416,21 +393,19 @@
                                         stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
                             </div>
-                            <h3 class="text-xl  font-bold text-secondary break-words">Acompanha<wbr>mento do
-                                Progresso da Instalação</h3>
-                        </div>
+                            <h3 class="text-xl font-bold text-secondary break-words">Acompanha <span>mento</span> do Progresso da Instalação</h3>
+                        </header>
                         <p class="text-secondary text-base font-medium">Com o SolarFlow, você pode acompanhar o
                             andamento das instalações em tempo real, garantindo que todas as etapas do processo sejam
                             concluídas no prazo e conforme o planejado.</p>
-                    </div>
-
-                    <div class="feature-card bg-white p-6 rounded-2xl shadow-md min-h-[400px] lg:max-w-xs hidden"
+                    </article>
+        
+                    <article class="feature-card bg-white p-6 rounded-2xl shadow-md min-h-[400px] lg:max-w-xs hidden"
                         data-category="monitoring">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div
-                                class=" p-3.5 bg-secondary rounded-2xl flex items-center justify-center">
-                                <svg class="w-[70px]" viewBox="0 0 100 100" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
+                        <header class="flex items-center gap-4 mb-4">
+                            <div class="p-3.5 bg-secondary rounded-2xl flex items-center justify-center">
+                                <svg class="w-[70px]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title-monitoramento-sistemas">
+                                    <title id="title-monitoramento-sistemas">Ícone de monitoramento de sistemas</title>
                                     <path d="M16.6667 87.4997V58.333" stroke="white" stroke-width="5"
                                         stroke-linecap="round" stroke-linejoin="round" />
                                     <path d="M16.6667 41.6667V12.5" stroke="white" stroke-width="5"
@@ -451,56 +426,59 @@
                                         stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
                             </div>
-                            <h3 class="text-xl font-bold text-secondary break-words">Monitoramento dos
-                                Sistemas Instalados</h3>
-                        </div>
+                            <h3 class="text-xl font-bold text-secondary break-words">Monitoramento dos Sistemas Instalados</h3>
+                        </header>
                         <p class="text-secondary text-base font-medium">O SolarFlow permite monitorar a localização
                             dos sistemas de energia solar dos seus clientes em tempo real, associando-os aos seus
                             respectivos leads e históricos de atendimento, garantindo uma gestão mais eficiente e melhor
                             acompanhamento pós-instalação.</p>
-                    </div>
+                    </article>
                 </div>
-
+        
                 <!-- Carrosséis Swiper para Mobile (um para cada categoria) -->
-                <div class="mobile-sliders hidden md:hidden max-lg:px-[5%]">
+                <div class="mobile-sliders hidden md:hidden max-lg:px-[5%]" aria-label="Carrossel de recursos para dispositivos móveis">
                     <!-- Swiper para GESTÃO DE PROCESSOS -->
-                    <div id="swiper-all" class="swiper-container mb-10">
+                    <div id="swiper-all" class="swiper-container mb-10" role="tabpanel" aria-labelledby="tab-all">
                         <div class="swiper-wrapper">
                             <!-- Slides serão inseridos via JavaScript -->
                         </div>
-                        <div class="swiper-pagination"></div>
+                        <div class="swiper-pagination" aria-label="Paginação do carrossel"></div>
                     </div>
-
+        
                     <!-- Swiper para AUTOMAÇÃO -->
-                    <div id="swiper-automation" class="swiper-container mb-10 hidden">
+                    <div id="swiper-automation" class="swiper-container mb-10 hidden" role="tabpanel" aria-labelledby="tab-automation">
                         <div class="swiper-wrapper">
                             <!-- Slides serão inseridos via JavaScript -->
                         </div>
-                        <div class="swiper-pagination"></div>
+                        <div class="swiper-pagination" aria-label="Paginação do carrossel"></div>
                     </div>
-
+        
                     <!-- Swiper para ANÁLISE E RELATÓRIOS -->
-                    <div id="swiper-analytics" class="swiper-container mb-10 hidden">
+                    <div id="swiper-analytics" class="swiper-container mb-10 hidden" role="tabpanel" aria-labelledby="tab-analytics">
                         <div class="swiper-wrapper">
                             <!-- Slides serão inseridos via JavaScript -->
                         </div>
-                        <div class="swiper-pagination"></div>
+                        <div class="swiper-pagination" aria-label="Paginação do carrossel"></div>
                     </div>
-
+        
                     <!-- Swiper para MONITORAMENTO EM TEMPO REAL -->
-                    <div id="swiper-monitoring" class="swiper-container mb-10 hidden">
+                    <div id="swiper-monitoring" class="swiper-container mb-10 hidden" role="tabpanel" aria-labelledby="tab-monitoring">
                         <div class="swiper-wrapper">
                             <!-- Slides serão inseridos via JavaScript -->
                         </div>
-                        <div class="swiper-pagination"></div>
+                        <div class="swiper-pagination" aria-label="Paginação do carrossel"></div>
                     </div>
                 </div>
-
+        
                 <!-- Botão de contato -->
                 <div class="article__button-container flex justify-center">
-                    <a data-aos="fade-up" data-aos-duration="700" data-aos-easing="ease-out" data-aos-anchor="#beneficios" data-aos-offset="500" target="_blank" href="https://wa.me/+5577991216617?text=Ol%C3%A1!%20Estou%20muito%20interessado%20em%20conhecer%20mais%20sobre%20o%20SolarFlow%20e%20como%20ele%20pode%20beneficiar%20minha%20empresa!" class="button button--cta bg-blue text-white flex flex-row items-center gap-2 p-4 text-[18px] rounded-lg w-fit hover:scale-[1.01] hover:bg-hover-blue trasition-all duration-500">
+                    <a data-aos="fade-up" data-aos-duration="700" data-aos-easing="ease-out" data-aos-anchor="#beneficios" data-aos-offset="500" 
+                       target="_blank" 
+                       href="https://wa.me/+5577991216617?text=Ol%C3%A1!%20Estou%20muito%20interessado%20em%20conhecer%20mais%20sobre%20o%20SolarFlow%20e%20como%20ele%20pode%20beneficiar%20minha%20empresa!" 
+                       class="button button--cta bg-blue text-white flex flex-row items-center gap-2 p-4 text-[18px] rounded-lg w-fit hover:scale-[1.01] hover:bg-hover-blue trasition-all duration-500"
+                       aria-label="Entre em contato pelo WhatsApp">
                         <span class="button__content poppins-semibold">ENTRE EM CONTATO</span>
-                        <img class="button__icon w-6" src="assets/icons/arrow-up-right--white.svg" alt="">
+                        <img class="button__icon w-6" src="assets/icons/arrow-up-right--white.svg" alt="Ícone de seta para direita e para cima">
                     </a>
                 </div>
             </div>
